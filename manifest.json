@@ -12,9 +12,14 @@
   "action": {
     "default_title": "Active Speed Reading"
   },
+  "side_panel": {
+    "default_path": "speedread.html"
+  },
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "contextMenus",
+    "sidePanel"
   ],
   "background": {
     "service_worker": "background.js"

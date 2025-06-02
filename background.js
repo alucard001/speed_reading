@@ -1,38 +1,26 @@
-chrome.runtime.onInstalled.addListener(async () => {
-    console.log("Extension installed");
-    chrome.action.setBadgeText({
-        text: "OFF",
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.contextMenus.create({
+        id: "speedRead",
+        title: "Speed read this",
+        contexts: ["selection"]
     });
+});
 
-    const extensions = 'https://developer.chrome.com/docs/extensions';
-    const webstore = 'https://developer.chrome.com/docs/webstore';
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+    if (info.menuItemId === "speedRead") {
+        console.log("Clicked")
+        chrome.sidePanel.open({
+            tabId: tab.id
+        });
 
-    chrome.action.onClicked.addListener(async (tab) => {
-        if (tab.url.startsWith(extensions) || tab.url.startsWith(webstore)) {
-            // Retrieve the action badge to check if the extension is 'ON' or 'OFF'
-            const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
-            // Next state will always be the opposite
-            const nextState = prevState === 'ON' ? 'OFF' : 'ON';
-
-            // Set the action badge to the next state
-            await chrome.action.setBadgeText({
-                tabId: tab.id,
-                text: nextState,
-            });
-
-            if (nextState === "ON") {
-                // Insert the CSS file when the user turns the extension on
-                await chrome.scripting.insertCSS({
-                    files: ["speedread.css"],
-                    target: { tabId: tab.id },
-                });
-            } else if (nextState === "OFF") {
-                // Remove the CSS file when the user turns the extension off
-                await chrome.scripting.removeCSS({
-                    files: ["speedread.css"],
-                    target: { tabId: tab.id },
-                });
+        chrome.scripting.executeScript({
+            target: { tabId: tab.id },
+            function: () => window.getSelection().toString()
+        }, (results) => {
+            if (results && results[0] && results[0].result) {
+                const selectedText = results[0].result;
+                chrome.runtime.sendMessage({ type: "selectedText", text: selectedText });
             }
-        }
-    })
+        });
+    }
 });

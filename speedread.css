@@ -1,20 +1,121 @@
-* {
-    display: none !important;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 15px;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-html,
-body,
-*:has(article),
-article,
-article * {
-    display: revert !important;
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-[role='navigation'] {
-    display: none !important;
+h1 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+    font-size: 1.8em;
 }
 
-article {
-    margin: auto;
-    max-width: 700px;
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls label {
+    font-size: 1.1em;
+    margin-right: 10px;
+    color: #555;
+}
+
+.controls input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.display-area {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 30px 15px;
+    margin-bottom: 25px;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #222;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#currentWord {
+    transition: transform 0.1s ease-out;
+}
+
+.buttons {
+    margin-bottom: 25px;
+}
+
+.buttons button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #357ABD;
+}
+
+.buttons button:active {
+    background-color: #2a64a0;
+}
+
+.content-preview {
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.content-preview h2 {
+    color: #4a90e2;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.content-preview p {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e6ea;
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #444;
+    max-height: 150px;
+    overflow-y: auto;
+    white-space: pre-wrap; /* Ensures text wraps and preserves formatting */
+    word-wrap: break-word; /* Breaks long words */
 }
