@@ -6,8 +6,22 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
+chrome.action.onClicked.addListener((tab) => {
+    chrome.sidePanel.setOptions({
+        tabId: tab.id,
+        path: 'howto.html',
+        enabled: true
+    });
+    chrome.sidePanel.open({ tabId: tab.id });
+});
+
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "speedRead") {
+        chrome.sidePanel.setOptions({
+            tabId: tab.id,
+            path: 'speedread.html',
+            enabled: true
+        });
         chrome.sidePanel.open({
             tabId: tab.id
         }).then(() => {
