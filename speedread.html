@@ -4,13 +4,8 @@
 <head>
     <title>Active Speed Reading</title>
     <link rel="stylesheet" href="speedread.css">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K28CKVB2');</script>
-    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="icons.css">
+    <link rel="stylesheet" href="webfonts.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -20,7 +15,7 @@
     <div class="container">
         <h1>Active Speed Reading</h1>
         <div class="controls">
-            <label id="rpmInputLabel" for="rpmInput">RPM:</label>
+            <label id="rpmInputLabel" for="rpmInput" title="Higher means faster">Display Speed:</label>
             <input type="number" id="rpmInput" value="350" min="50" step="50" aria-labelledby="rpmInputLabel">
         </div>
         <div class="display-area">
@@ -31,19 +26,15 @@
             <p>Loading text...</p>
         </div>
         <div class="buttons">
-            <button id="startButton" aria-label="Start Reading">Play</button>
-            <button id="stopButton" aria-label="Stop Reading">Stop</button>
-            <button id="resetButton" aria-label="Reset Reading">Reset</button>
+            <button id="startButton" aria-label="Start Reading" title="Start Reading"><i class="fas fa-play"></i></button>
+            <button id="stopButton" aria-label="Stop Reading" title="Stop Reading"><i class="fas fa-stop"></i></button>
+            <button id="resetButton" aria-label="Reset Reading" title="Reset Reading"><i class="fas fa-redo"></i></button>
         </div>
         <div class="content-preview">
             <h2>Selected Text:</h2>
             <p id="speedReadContent"></p>
         </div>
         <div id="buymeacoffee">
-            <!-- <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-                data-name="bmc-button" data-slug="elleryleung" data-color="#FFDD00" data-emoji=""
-                data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000"
-                data-coffee-color="#ffffff" integrity="sha256-w/5MegmPEqakVcvy4riya+DfHdO9+6Cw6AD6J/l8JqM=" crossorigin="anonymous"></script> -->
             <a href="https://www.buymeacoffee.com/elleryleung" target="_blank">
                 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
                     style="height: 60px !important;width: 217px !important;" />

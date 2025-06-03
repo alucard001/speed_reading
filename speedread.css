@@ -94,6 +94,47 @@ h1 {
     background-color: #2a64a0;
 }
 
+.buttons button i {
+    font-style: normal;
+}
+
+#startButton {
+    background-color: #28a745;
+}
+
+#startButton:hover {
+    background-color: #218838;
+}
+
+#startButton:active {
+    background-color: #1e7e34;
+}
+
+#stopButton {
+    background-color: #dc3545;
+}
+
+#stopButton:hover {
+    background-color: #c82333;
+}
+
+#stopButton:active {
+    background-color: #bd2130;
+}
+
+#resetButton {
+    background-color: #ffc107;
+    color: #333;
+}
+
+#resetButton:hover {
+    background-color: #e0a800;
+}
+
+#resetButton:active {
+    background-color: #c69500;
+}
+
 .content-preview {
     text-align: left;
     border-top: 1px solid #eee;

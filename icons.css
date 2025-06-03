@@ -1,0 +1,16 @@
+.fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.fa-play::before {
+    content: "\f04b";
+}
+
+.fa-stop::before {
+    content: "\f04d";
+}
+
+.fa-redo::before {
+    content: "\f01e";
+}

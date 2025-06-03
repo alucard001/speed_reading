@@ -8,7 +8,6 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "speedRead") {
-        console.log("Clicked")
         chrome.sidePanel.open({
             tabId: tab.id
         }).then(() => {
