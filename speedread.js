@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       chrome.runtime.sendMessage({ type: "panelReady" });
     } else if (message.type === "selectedText") {
       loadingOverlay.style.display = 'flex'; // Show loading overlay
+      loadingOverlay.setAttribute('aria-hidden', 'false');
       textToRead = message.text;
       // Split text by words for English and characters for Chinese
       // This regex splits by spaces for English words, and by individual characters for Chinese.
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       speedReadContent.textContent = textToRead;
       resetReading();
       loadingOverlay.style.display = 'none'; // Hide loading overlay
+      loadingOverlay.setAttribute('aria-hidden', 'true');
     }
   });
 
