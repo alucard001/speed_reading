@@ -1,18 +1,22 @@
+// Copyright (c) 2024 [Ellery Leung]. All rights reserved.
 {
   "manifest_version": 3,
   "name": "Active Speed Reading",
   "description": "Allow you to speed read the current page.  Support Chinese and English.",
   "version": "0.0.1",
-  "icons": {
+  "icons": // Copyright (c) 2024 [Ellery Leung]. All rights reserved.
+{
     "16": "images/speed-reading16x16.png",
     "32": "images/speed-reading32x32.png",
     "48": "images/speed-reading48x48.png",
     "128": "images/speed-reading128x128.png"
   },
-  "action": {
+  "action": // Copyright (c) 2024 [Ellery Leung]. All rights reserved.
+{
     "default_title": "Active Speed Reading"
   },
-  "side_panel": {
+  "side_panel": // Copyright (c) 2024 [Ellery Leung]. All rights reserved.
+{
     "default_path": "speedread.html"
   },
   "permissions": [
@@ -21,7 +25,8 @@
     "contextMenus",
     "sidePanel"
   ],
-  "background": {
+  "background": // Copyright (c) 2024 [Ellery Leung]. All rights reserved.
+{
     "service_worker": "background.js"
   }
 }

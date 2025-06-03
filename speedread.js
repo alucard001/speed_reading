@@ -1,3 +1,4 @@
+// Copyright (c) 2024 [Ellery Leung]. All rights reserved.
 document.addEventListener('DOMContentLoaded', () => {
   const speedReadContent = document.getElementById('speedReadContent');
   const startButton = document.getElementById('startButton');

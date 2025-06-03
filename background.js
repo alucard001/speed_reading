@@ -1,3 +1,4 @@
+// Copyright (c) 2024 [Ellery Leung]. All rights reserved.
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: "speedRead",
