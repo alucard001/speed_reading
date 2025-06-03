@@ -2,23 +2,28 @@
 <html>
 
 <head>
-    <title>Speed Read</title>
+    <title>Active Speed Reading</title>
     <link rel="stylesheet" href="speedread.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Speed Reader</h1>
+        <h1>Active Speed Reading</h1>
         <div class="controls">
             <label for="rpmInput">RPM:</label>
-            <input type="number" id="rpmInput" value="300" min="50" step="50">
+            <input type="number" id="rpmInput" value="350" min="50" step="50">
         </div>
         <div class="display-area">
             <span id="currentWord"></span>
         </div>
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>Loading text...</p>
+        </div>
         <div class="buttons">
             <button id="startButton">Play</button>
             <button id="stopButton">Stop</button>
+            <button id="resetButton">Reset</button>
         </div>
         <div class="content-preview">
             <h2>Selected Text:</h2>
