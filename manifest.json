@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Active Speed Reading",
   "description": "Allow you to speed read the current page.  Support Chinese and English.",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "icons": {
     "16": "images/speed-reading16x16.png",
     "32": "images/speed-reading32x32.png",
